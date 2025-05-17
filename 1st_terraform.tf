@@ -20,6 +20,6 @@ resource "aws_instance" "web" {
 }
 
 variable "instance_type" {
-  default = t2.micro
+  default = "t2.micro"
   description = "this is now basic instance"
 }
