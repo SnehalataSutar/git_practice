@@ -1,11 +1,3 @@
-terraform{
-  backend "s3"{
-    bucket = "terra-buc-demo"
-    region = "ap-south-1"
-    key = "terraform.ftstate"
-  }
-}
-
 resource "aws_vpc" "myvpc" {
   cidr_block = var.vpc_cidr
   tags = {
@@ -56,11 +48,8 @@ resource "aws_route_table" "myroute_table" {
   }
 }
 
-data "aws_security_group" "mysgsg" {
-   filter {
-     name = "group_name"
-     values = ["mysg"]
-   }
+data "aws_security_group" "mysg" {
+   id = "sg-09786a2d2f75176bd"
 }
 
 resource "aws_instance" "web" {
@@ -68,27 +57,6 @@ resource "aws_instance" "web" {
   instance_type = var.instance_type
   key_name = "terra_practice"
   vpc_security_group_ids = data.aws_security_group.sg-0bb8da6ed997e63f8.id
-  
-  # connection {
-  #   type = "ssh"
-  #   user = "root"
-  #   password = password
-  #   host = self.public_ip
-  # }
-  # provisioner "remote-exec" {
-  #   inline = [ 
-  #       "chmod +x /tmp/script.sh",
-  #       "/tmp/script.sh args",
-  #    ]
-  # }
-  # provisioner "file" {
-  #   source = "/aws/index.html"
-  #   destination = "/var/www/html/index.html"
-  # }
-  # provisioner "local-exec" {
-  #   command = "echo this task is successful"
-  # }
-
   tags = {
     Name = var.project_name
   }
