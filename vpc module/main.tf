@@ -49,7 +49,7 @@ resource "aws_route_table" "myroute_table" {
 }
 
 data "aws_security_group" "mysg" {
-   id = ["sg-09786a2d2f75176bd"]
+   id = "sg-09786a2d2f75176bd"
 }
 
 resource "aws_instance" "web" {
