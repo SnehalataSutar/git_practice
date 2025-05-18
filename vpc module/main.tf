@@ -56,10 +56,10 @@ resource "aws_route_table" "myroute_table" {
   }
 }
 
-data "aws_security_group" "sg-0bb8da6ed997e63f8" {
+data "aws_security_group" "mysgsg" {
    filter {
      name = "group_name"
-     values = ["sg-0bb8da6ed997e63f8"]
+     values = ["mysg"]
    }
 }
 
@@ -69,25 +69,25 @@ resource "aws_instance" "web" {
   key_name = "terra_practice"
   vpc_security_group_ids = data.aws_security_group.sg-0bb8da6ed997e63f8.id
   
-  connection {
-    type = "ssh"
-    user = "root"
-    password = password
-    host = self.public_ip
-  }
-  provisioner "remote-exec" {
-    inline = [ 
-        "chmod +x /tmp/script.sh",
-        "/tmp/script.sh args",
-     ]
-  }
-  provisioner "file" {
-    source = "/aws/index.html"
-    destination = "/var/www/html/index.html"
-  }
-  provisioner "local-exec" {
-    command = "echo this task is successful"
-  }
+  # connection {
+  #   type = "ssh"
+  #   user = "root"
+  #   password = password
+  #   host = self.public_ip
+  # }
+  # provisioner "remote-exec" {
+  #   inline = [ 
+  #       "chmod +x /tmp/script.sh",
+  #       "/tmp/script.sh args",
+  #    ]
+  # }
+  # provisioner "file" {
+  #   source = "/aws/index.html"
+  #   destination = "/var/www/html/index.html"
+  # }
+  # provisioner "local-exec" {
+  #   command = "echo this task is successful"
+  # }
 
   tags = {
     Name = var.project_name
