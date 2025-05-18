@@ -51,3 +51,13 @@ resource "aws_route_table" "myroute_table" {
 data "aws_security_group" "mysg" {
    id = "sg-09786a2d2f75176bd"
 }
+
+resource "aws_instance" "web" {
+  ami           = "ami-0e35ddab05955cf57"
+  instance_type = var.instance_type
+  key_name = "terra_practice"
+  vpc_security_group_ids = data.aws_security_group.mysg.id
+  tags = {
+    Name = var.project_name
+  }
+}
