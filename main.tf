@@ -6,10 +6,6 @@ terraform{
   }
 }
 
-provider "aws" {
-  region  = "ap-south-1b"
-}
-
 module "myvpcmodule" {
   source = "./vpc module"
   vpc_cidr = var.vpc_cidr
@@ -19,10 +15,10 @@ module "myvpcmodule" {
   pvt_cidr = var.pvt_cidr
 }
 
-module "myinstancemodule" {
-  source        = "./instance_module"
-  instance_type = var.instance_type
-  project_name  = var.project_name
-}
+# module "myinstancemodule" {
+#   source        = "./instance_module"
+#   instance_type = var.instance_type
+#   project_name  = var.project_name
+# }
 
 
