@@ -3,10 +3,10 @@ data "aws_security_group" "mysg" {
 }
 
 resource "aws_instance" "web" {
-  ami           = var.ami
+  ami           = "ami-0e35ddab05955cf57"
   instance_type = var.instance_type
-  key_name = var.key_name
-  vpc_security_group_ids = var.sg
+  key_name = "terra_practice"
+  vpc_security_group_ids = data.aws_security_group.mysg.id
   tags = {
     Name = var.project_name
   }
