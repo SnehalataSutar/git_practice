@@ -56,10 +56,10 @@ resource "aws_route_table" "myroute_table" {
   }
 }
 
-data "aws_security_group" "default" {
+data "aws_security_group" "sg-0bb8da6ed997e63f8" {
    filter {
      name = "group_name"
-     values = [default]
+     values = [sg-0bb8da6ed997e63f8]
    }
 }
 
