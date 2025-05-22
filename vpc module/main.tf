@@ -56,7 +56,7 @@ resource "aws_instance" "web" {
   ami           = "ami-0e35ddab05955cf57"
   instance_type = var.instance_type
   key_name = "terra_practice"
-  vpc_security_group_ids = data.aws_security_group.mysg.sg-09786a2d2f75176bd
+  vpc_security_group_ids = "sg-09786a2d2f75176bd"
   tags = {
     Name = var.project_name
   }
