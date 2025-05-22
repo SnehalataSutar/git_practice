@@ -1,3 +1,4 @@
-output "instance_public_ip" {
-  value = aws_instance.web.public_ip
+output "aws_vpc" {
+  value       = aws_vpc.myvpc.id
+  description = "It will show my vpc id when Ec2 instance is launch"
 }
