@@ -12,8 +12,8 @@ variable "instance_type" {
   description = "this is now basic instance"
 }
 variable "pub_cidr" {
-    default = "10.0.0.0/16"
+    default = "10.0.1.0/16"
 }
 variable "pvt_cidr" {
-    default = "10.0.0.0/16"
+    default = "10.0.2.0/16"
 }
