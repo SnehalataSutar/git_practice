@@ -84,7 +84,7 @@ tags = {
     project = var.project_name
   }
   map_public_ip_on_launch = true
-  availability_zone = "ap-south-1"
+  availability_zone = "ap-south-1b"
 }
 
 resource "aws_subnet" "private_subnet" {
