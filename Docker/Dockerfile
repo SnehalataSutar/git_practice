@@ -1,12 +1,13 @@
 FROM alpine:latest
 
-ENV path /var/www/localhost/htdocs/index.html
+RUN apk update && apk add --no-cache apache2 
 
-RUN apk update && \
-    apk add --no-cache apache2 
+ENV project=devops
 
-RUN echo "<h1> Hello Everyone, Welcome to devops batch</h1>" > ./index.html
+WORKDIR /var/www/localhost/htdocs
+
+COPY index.html
 
 EXPOSE 80
 
-CMD [ "httpd", "-D", "FOREGROUND" ]
+CMD [ "/usr/sbin/httpd", "-D", "FOREGROUND" ]
