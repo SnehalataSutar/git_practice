@@ -6,7 +6,7 @@ ENV project=devops
 
 WORKDIR /var/www/localhost/htdocs
 
-COPY index.html
+COPY index.html .
 
 EXPOSE 80
 
