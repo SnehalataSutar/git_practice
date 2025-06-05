@@ -1,0 +1,14 @@
+varsion: "3"
+services:
+  webserver:
+   image: snehalatasutar/docker_practice:v1
+   ports: 
+    - 80:80
+   environment:
+    - department=dev
+  backend:
+   image: snehalatasutar/docker_practice:alpine
+   ports:
+    - 8080:80
+
+
