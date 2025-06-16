@@ -1,21 +1,19 @@
 apiVersion: v1
 kind: ReplicationController
 metadata:
-  name: spider2
+  name: nginx
 spec:
   replicas: 3
   selector:
-    app: spider2
+    app: nginx
   template:
     metadata:
-      name: spider2
+      name: nginx
       labels:
-        name: spider2
+        app: nginx
     spec:
-     containers:
-        - name: spider2
-          image: nginx
-          ports:
-           - containerPort: 80
-
-
+      containers:
+      - name: nginx
+        image: nginx
+        ports:
+        - containerPort: 80
