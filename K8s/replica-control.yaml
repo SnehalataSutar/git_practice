@@ -8,13 +8,14 @@ spec:
     app: spider3
   template:
     metadata:
-      name: spider3
-      labels:
-        name: spider3
-    spec:
-      containers:
-        - name: spider3
-          image: nginx
-          ports:
-            - containerPort: 80
+  name: spider2
+  labels:
+    name: myapp
+spec:
+  containers:
+   - name: spider2
+     image: nginx
+     ports:
+      - containerPort: 80
+
 
