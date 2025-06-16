@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: ReplicationController
 metadata:
-  name: myapp
+  name: spider3
 spec:
   replicas: 3
   selector:
