@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: ReplicationController
 metadata:
-  name: myreplicationcontroller
+  name: myapp
 spec:
   replicas: 3
   selector:
