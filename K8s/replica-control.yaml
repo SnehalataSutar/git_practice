@@ -10,7 +10,7 @@ spec:
     metadata:
       name: spider2
       labels:
-        name: myapp
+        name: myreplicationcontroller
     spec:
       containers:
         - name: spider2
