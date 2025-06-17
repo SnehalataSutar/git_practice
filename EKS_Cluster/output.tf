@@ -10,4 +10,6 @@ output "cluster_name" {
 
 output "kubeconfig_command" {
   value = "aws eks --region ${var.region} update-kubeconfig --name ${module.eks.cluster_id}"
+   value       = var.region != null && module.eks.cluster_id != null ? "aws eks --region ${var.region} update-kubeconfig --name ${module.eks.cluster_id}" : "Cluster not created yet"
+
 }
