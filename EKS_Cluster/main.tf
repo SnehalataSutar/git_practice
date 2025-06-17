@@ -50,6 +50,18 @@ module "eks" {
       desired_size   = 2
     }
   }
+  module "eks" {
+  source  = "terraform-aws-modules/eks/aws"
+  version = "X.Y.Z"
+
+  cluster_name    = "my-eks-cluster"
+  cluster_version = "1.29"
+
+  # Other required inputs...
+
+  create_cloudwatch_log_group = false
+}
+
 
   tags = {
     Environment = "dev"
