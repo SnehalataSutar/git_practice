@@ -7,4 +7,4 @@ spec:
     app: myapp
   ports:
   - port: 80
-    targetPort: <Target Port>
+    targetPort: 80
