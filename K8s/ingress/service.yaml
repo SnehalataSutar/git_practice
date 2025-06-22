@@ -4,7 +4,7 @@ metadata:
   name: myapp-home-service
 spec:
   selector:
-    app: myapp-
+    app: myapp-home
   ports:
   - port: 80
     targetPort: 80
@@ -16,7 +16,7 @@ metadata:
   name: myapp-mobile
 spec:
   selector:
-    app: myapp
+    app: myapp-mobile
   ports:
-  - port: <Port>
+  - port: 80
     targetPort: <Target Port>
