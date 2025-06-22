@@ -4,7 +4,7 @@ metadata:
   name: myapp-home-service
 spec:
   selector:
-    app: myapp
+    app: myapp-
   ports:
   - port: 80
     targetPort: 80
@@ -13,7 +13,7 @@ spec:
 apiversion: v1
 kind: Service
 metadata:
-  name: myapp
+  name: myapp-mobile
 spec:
   selector:
     app: myapp
