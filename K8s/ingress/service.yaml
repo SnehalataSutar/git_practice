@@ -9,7 +9,7 @@ spec:
   - port: 80
     targetPort: 80
 
-
+---
 apiversion: v1
 kind: Service
 metadata:
