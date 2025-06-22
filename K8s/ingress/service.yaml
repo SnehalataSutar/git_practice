@@ -13,7 +13,7 @@ spec:
 apiversion: v1
 kind: Service
 metadata:
-  name: myapp-mobile
+  name: myapp-mobile-service
 spec:
   selector:
     app: myapp-mobile
