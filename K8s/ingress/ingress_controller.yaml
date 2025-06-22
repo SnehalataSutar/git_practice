@@ -23,6 +23,6 @@ spec:
         path: "/mobile"
         backend:
           service:
-            name: myapp-home-service
+            name: myapp-mobile-service
             port: 
               number: 80
