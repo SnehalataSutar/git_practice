@@ -33,7 +33,7 @@ spec:
     spec:
       containers:
       - name: myapp-mobile
-        image: <Image>
+        image: httpd
         resources:
           limits:
             memory: "128Mi"
