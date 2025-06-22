@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: apiVersion: apps/v1
+
 kind: Deployment
 metadata:
   name: myapp
@@ -20,4 +20,4 @@ spec:
             memory: "128Mi"
             cpu: "500m"
         ports:
-        - containerPort: <Port>
+        - containerPort: 80
