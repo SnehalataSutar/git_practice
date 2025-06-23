@@ -24,9 +24,9 @@ spec:
        - name: nginx
          image: nginx:1.14.2
          env:
-          name: hello
-          valuesFrom: 
-            configMapKeyRef:
+          - name: hello
+            valuesFrom: 
+             configMapKeyRef:
               name: myvariable
               key: env
         ports:
