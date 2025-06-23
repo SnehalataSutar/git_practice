@@ -19,7 +19,7 @@ spec:
       name: spider4
       labels:
         valuesFrom: 
-          configM 
+          configMapKeyRef 
             name: myvariable
         app: nginx
     spec:
