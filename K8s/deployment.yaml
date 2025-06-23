@@ -24,7 +24,7 @@ spec:
        - name: nginx
          image: nginx:1.14.2
          env:
-          - name: gaurisutar
+          - name: hello
             valuesFrom: 
               configMapKeyRef:
                 name: myvariable
