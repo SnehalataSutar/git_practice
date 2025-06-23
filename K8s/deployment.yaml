@@ -16,6 +16,7 @@ spec:
       app: nginx
   template:
     metadata:
+      name: spider4
       labels:
         app: nginx
     spec:
