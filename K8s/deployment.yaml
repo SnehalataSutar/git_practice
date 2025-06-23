@@ -20,8 +20,8 @@ spec:
       labels:
         valuesFrom: 
           configMapKeyRef:
-            
-        app: nginx
+            name: myvariable
+            app: nginx
     spec:
       containers:
       - name: nginx
