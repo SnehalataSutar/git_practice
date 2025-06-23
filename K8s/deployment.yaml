@@ -18,7 +18,8 @@ spec:
     metadata:
       name: spider4
       labels:
-        values
+        valuesFrom: 
+        
         app: nginx
     spec:
       containers:
