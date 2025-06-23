@@ -26,8 +26,8 @@ spec:
          env:
           - name: hello
             valuesFrom: 
-             configMapKeyRef:
-              name: myvariable
-              key: env
+              configMapKeyRef:
+                name: myvariable
+                key: env
         ports:
           - containerPort: 80
