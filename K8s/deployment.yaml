@@ -19,8 +19,8 @@ spec:
       name: spider4
       labels:
         valuesFrom: 
-          configMapKeyRef:  
-            name: configMapKeyRef:
+          configMapKeyRef:
+            
         app: nginx
     spec:
       containers:
