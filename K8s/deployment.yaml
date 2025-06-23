@@ -18,14 +18,14 @@ spec:
     metadata:
       name: spider4
       labels:
-        valuesFrom: 
-          configMapKeyRef:
-            name: myvariable
-            key: env
-            app: nginx
+        app: nginx
     spec:
       containers:
       - name: nginx
         image: nginx:1.14.2
+        valuesFrom: 
+          configMapKeyRef:
+            name: myvariable
+            key: env
         ports:
         - containerPort: 80
