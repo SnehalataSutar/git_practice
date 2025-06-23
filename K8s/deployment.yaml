@@ -9,8 +9,9 @@ spec:
   strategy: 
     type: RollingUpdate
     rollingUpdate:
-      maxSurge:
+      maxSurge: 3
       max
+      
 
   selector:
     matchLabels:
