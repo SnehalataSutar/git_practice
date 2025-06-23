@@ -10,9 +10,7 @@ spec:
     type: RollingUpdate
     rollingUpdate:
       maxSurge: 3
-      max
-      
-
+      maxUnavailable:1
   selector:
     matchLabels:
       app: nginx
