@@ -29,5 +29,5 @@ spec:
               configMapKeyRef:
                 name: myvariable
                 key: env
-        ports:
+         ports:
           - containerPort: 80
