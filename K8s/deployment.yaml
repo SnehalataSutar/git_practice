@@ -21,7 +21,7 @@ spec:
         valuesFrom: 
           configMapKeyRef:
             name: myvariable
-            kr
+            key: env
             app: nginx
     spec:
       containers:
