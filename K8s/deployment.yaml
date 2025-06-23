@@ -21,9 +21,9 @@ spec:
         env: devops
     spec:
       containers:
-      - name: nginx
-        image: nginx:1.14.2
-        env:
+       - name: nginx
+         image: nginx:1.14.2
+         env:
           name: hello
           valuesFrom: 
             configMapKeyRef:
