@@ -6,8 +6,10 @@ metadata:
     app: nginx
 spec:
   replicas: 3
-  strategy: RollingUpdate
-  
+  strategy: 
+    type: RollingUpdate
+    
+
   selector:
     matchLabels:
       app: nginx
