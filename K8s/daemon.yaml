@@ -15,7 +15,7 @@ spec:
         env: devops
     spec:
       containers:
-      - name: example-container
+      - name: nginx
         image: nginx
         ports:
         - name: http
