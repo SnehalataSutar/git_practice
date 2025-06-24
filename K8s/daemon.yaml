@@ -1,1 +1,2 @@
-apiVersion: apps
+apiVersion: app/v1
+kind: daemonset
