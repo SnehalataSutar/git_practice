@@ -13,7 +13,8 @@ spec:
     metadata:
       name: mypod-ss
       labels:
-        app: myapp
+        app: myapp-ss
+        env: 
     spec:
       containers:
       - name: myapp
