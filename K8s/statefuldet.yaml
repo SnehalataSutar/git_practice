@@ -24,6 +24,13 @@ spec:
           containerPort: 80
         env: 
         - name: MARIADB_ROOT_PASSWORD
-          value: Admin123
+          valueFrom: 
+            apiVersion: v1
+            kind: ConfigMap
+            metadata:
+              name: myapp
+            data:
+              key: value
+            
           
        
