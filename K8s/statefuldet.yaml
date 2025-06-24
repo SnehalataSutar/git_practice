@@ -21,7 +21,7 @@ spec:
         image: mariadb
         ports:
         - containerPort: 80
-          name: web
+          name: db
         volumeMounts:
         - name: www
           mountPath: /usr/share/nginx/html
