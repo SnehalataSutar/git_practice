@@ -12,7 +12,7 @@ spec:
     metadata:
       name: mypod
       labels:
-        app
+        app: myapp
         env: devops
     spec:
       containers:
