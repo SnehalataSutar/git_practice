@@ -3,7 +3,7 @@ kind: StatefulSet
 metadata:
   name: mystatefulset
   labels:
-        app: myapp
+    app: myapp
 spec:
   selector:
     matchLabels:
