@@ -17,4 +17,5 @@ spec:
       containers:
       - name: example-container
         image: nginx
-        
+        ports:
+        -
