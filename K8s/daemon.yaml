@@ -16,4 +16,5 @@ spec:
     spec:
       containers:
       - name: example-container
-        image: your-image:latest
+        image: nginx
+        
