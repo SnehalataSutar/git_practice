@@ -10,8 +10,9 @@ spec:
       app: myapp
   template:
     metadata:
+      name: mypod
       labels:
-        name: mypod
+        app
         env: devops
     spec:
       containers:
