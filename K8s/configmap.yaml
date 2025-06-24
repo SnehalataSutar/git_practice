@@ -3,6 +3,5 @@ kind: ConfigMap
 metadata:
   name: myvariable
 data:
-  name: name: MARIADB_ROOT_PASSWORD
-          value: Admin123
-  env: devops 
+  name: MARIADB_ROOT_PASSWORD
+  password: Admin123 
