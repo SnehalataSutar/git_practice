@@ -14,10 +14,10 @@ spec:
       name: mypod-ss
       labels:
         app: myapp-ss
-        env: 
+        env: devops
     spec:
       containers:
-      - name: myapp
+      - name: mariadb
         image: registry.k8s.io/nginx-slim:0.8
         ports:
         - containerPort: 80
