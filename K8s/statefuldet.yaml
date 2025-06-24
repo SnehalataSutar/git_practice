@@ -8,9 +8,10 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: myapp
+      app: myapp-ss
   template:
     metadata:
+      name: mypod
       labels:
         app: myapp
     spec:
