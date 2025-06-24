@@ -11,7 +11,7 @@ spec:
   template:
     metadata:
       labels:
-        name: example-pod
+        name: mypod
         env: devops
     spec:
       containers:
