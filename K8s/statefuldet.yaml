@@ -11,7 +11,7 @@ spec:
       app: myapp-ss
   template:
     metadata:
-      name: mypod
+      name: mypod-ss
       labels:
         app: myapp
     spec:
