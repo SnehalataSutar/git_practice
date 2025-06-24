@@ -22,5 +22,7 @@ spec:
         ports:
         - name: db
           containerPort: 80
+        env: 
+          name: MARIADB_ROOT_PASSWORD
           
        
