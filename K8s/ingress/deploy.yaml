@@ -36,3 +36,33 @@ spec:
         image: httpd
         ports:
         - containerPort: 80
+
+
+
+        apiVersion: apps/v1      # for Deployments
+kind: Deployment
+metadata:
+  name: myapp-home
+  namespace: your-namespace  # optional if using default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: myapp-home
+  template:
+    metadata:
+      labels:
+        app: myapp-home
+    spec:
+      containers:
+      - name: …
+        image: …
+---
+apiVersion: apps/v1      # for your other Deployment (e.g. myapp-mobile)
+kind: Deployment
+metadata:
+  name: myapp-mobile
+  namespace: your-namespace
+spec:
+  … same pattern …
+
