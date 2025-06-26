@@ -62,6 +62,19 @@ apiVersion: apps/v1      # for your other Deployment (e.g. myapp-mobile)
 kind: Deployment
 metadata:
   name: myapp-mobile
-  
+spec:
+  selector:
+    matchLabels:
+      app: myapp-mobile
+  template:
+    metadata:
+      labels:
+        app: myapp-mobile
+    spec:
+      containers:
+      - name: myapp-mobile
+        image: httpd
+        ports:
+        - containerPort: 80  
 
 
