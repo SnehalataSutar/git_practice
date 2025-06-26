@@ -36,10 +36,10 @@ spec:
         image: httpd
         ports:
         - containerPort: 80
+...
 
-
-
-        apiVersion: apps/v1      # for Deployments
+---
+apiVersion: apps/v1      # for Deployments
 kind: Deployment
 metadata:
   name: myapp-home
