@@ -62,7 +62,6 @@ apiVersion: apps/v1      # for your other Deployment (e.g. myapp-mobile)
 kind: Deployment
 metadata:
   name: myapp-mobile
-  namespace: your-namespace
-spec:
-  … same pattern …
+  
+
 
