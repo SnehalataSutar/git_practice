@@ -25,18 +25,18 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: myapp-home
+      app: myapp-mobile
   template:
     metadata:
       labels:
-        app: myapp-home
+        app: myapp-mobile
     spec:
       containers:
-      - name: myapp-home
-        image: nginx
+      - name: myapp-mobile
+        image: httpd
         ports:
         - containerPort: 80
-...
+
 
 ---
 apiVersion: apps/v1      # for Deployments
