@@ -34,7 +34,6 @@ metadata:
   labels:
     name: myingress
 spec:
-  ingressClassName: nginx         # optional: specify your Ingress controller
   rules:
     - host: home.com
       http:
