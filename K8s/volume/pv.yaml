@@ -11,5 +11,4 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   storageClassName: slow
   hostPath:
-    path: /tmp
-    server: 172.17.0.2
+    path: /mnt/data
