@@ -16,12 +16,12 @@ output "kubeconfig_command" {
 
 output "kubeconfig_command" {
   value = (
-    length(aws_eks_cluster.this) > 0 && aws_eks_cluster.this[0].endpoint != "" ?
+    length(aws_eks_cluster.this) > 0 && aws_eks_cluster.this[0].endpoint != "https://EF51AA8E6A016EADF774B08FACF06CDD.gr7.us-east-1.eks.amazonaws.com" ?
     "aws eks update-kubeconfig --region ${var.region} --name ${aws_eks_cluster.this[0].name}" :
     "Cluster not created yet"
   )
 }
 
 
-cluster_endpoint = "https://EF51AA8E6A016EADF774B08FACF06CDD.gr7.us-east-1.eks.amazonaws.com"
-kubeconfig_command = "Cluster not created yet"
+# cluster_endpoint = "https://EF51AA8E6A016EADF774B08FACF06CDD.gr7.us-east-1.eks.amazonaws.com"
+# kubeconfig_command = "Cluster not created yet"
