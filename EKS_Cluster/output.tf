@@ -13,3 +13,6 @@ output "kubeconfig_command" {
   value = var.region != null && module.eks.cluster_id != null ? "aws eks --region ${var.region} update-kubeconfig --name ${module.eks.cluster_id}" : "Cluster not created yet"
 
 }
+
+cluster_endpoint = "https://EF51AA8E6A016EADF774B08FACF06CDD.gr7.us-east-1.eks.amazonaws.com"
+kubeconfig_command = "Cluster not created yet"
