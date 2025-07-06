@@ -14,10 +14,4 @@ output "kubeconfig_command" {
 
 }
 
-output "kubeconfig_command" {
-  value = (
-    length(aws_eks_cluster.this) > 0 && aws_eks_cluster.this[0].endpoint != "" ?
-    "aws eks update-kubeconfig --region ${var.region} --name ${aws_eks_cluster.this[0].name}" :
-    "Cluster not created yet"
-  )
-}
+
